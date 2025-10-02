@@ -1,0 +1,21 @@
+def get_explanations() -> str:
+    return (
+        "OOP Concepts Used in This Project\n"
+        "--------------------------------\n\n"
+        "1) Multiple Inheritance:\n"
+        "   - `TextModelRunner` and `ImageModelRunner` inherit from `BaseModelRunner` and `LoggingMixin`.\n\n"
+        "2) Decorators:\n"
+        "   - `@timeit` measures runtime and stores it in `last_runtime_s`.\n"
+        "   - `@ensure_initialized` ensures `load()` was called before `run()`.\n\n"
+        "3) Encapsulation:\n"
+        "   - Private-like attributes `_initialized` and `_pipe` with a public `initialized` property.\n\n"
+        "4) Polymorphism:\n"
+        "   - Both runners implement a common `run(input)` interface returning a dict.\n\n"
+        "5) Method Overriding:\n"
+        "   - `describe()` is defined in the base and overridden in both runners.\n"
+        "   - `_preprocess()` in Image runner can be overridden by subclasses.\n\n"
+        "6) Multi-file Structure:\n"
+        "   - Code split across `models.py`, `gui.py`, `utils/`, and `main.py` as requested.\n\n"
+        "7) Hugging Face Integration:\n"
+        "   - Uses `transformers.pipeline` to load and run free models without manual downloads.\n"
+    )
